@@ -1,0 +1,303 @@
+.top-container {
+  background-color: transparent;  /* 背景: 黒 */
+  color: #fff;
+  font-family: 'Michroma', sans-serif; /* 必要ならGoogle Fontsなど */
+}
+
+.hero-section {
+  min-height: 100vh; /* 画面全体の高さ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .superuser-logo {
+    width: 40vw;
+    max-width: 600px;
+    height: auto;
+    margin-top: -36px;
+    animation: fadeInScale 5s ease forwards;
+    @media (max-width: 768px) {
+      width: 70vw;
+      max-width: 300px;
+    }
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-indicator {
+  margin-top: -55px;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 959px) {
+  // sp
+  margin-top: -25px;
+  font-size: 8px;
+  }
+
+  .line-container {
+    position: relative;
+    width: 2px;         /* 細い線の太さ */
+    height: 60px;       /* 線の長さをお好みで調整 */
+    margin-top: 8px;
+
+    /* 既存の細い線 (縦) */
+    .line-base {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;           /* 細線の太さ */
+      height: 100%;         /* 親要素の高さに合わせて全長 */
+      background-color: #6666667a; /* 細い線の色 */
+    }
+
+    /* 太いアニメ線 */
+    .line-anim {
+      position: absolute;
+      top: 0;
+      left: 0px;      /* 細線の中央に重なるように微調整 */
+      width: 2px;      /* 太線の太さ */
+      height: 0;       /* 初期は 0 で隠す */
+      background-color: #fff;
+      opacity: 0.8;
+
+      /* 上から下への伸び縮みを繰り返すアニメーション */
+      animation: flowLineVertical 2s ease-in-out infinite;
+    }
+  }
+}
+
+/* keyframes: 0→100%→0 で上下に線が伸び縮みする */
+@keyframes flowLineVertical {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 100%;  /* 親要素 line-container の高さ分 */
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+
+.latest-releases-section {
+  /* タイトルバー (白背景) */
+  padding: 80px 30px;
+  .title-bar {
+    background-color: #fff;
+    color: #000;
+    padding: 16px 0;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    border: 3px solid #fff;
+
+    .section-title {
+      font-size: 16px;
+      letter-spacing: 4px;
+      margin: 0; /* 余白を調整したい場合は変更 */
+    }
+  }
+
+  .releases-grid {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 3px solid #fff;
+    background: #aaaaaa2b;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; /* モバイル: 1列 */
+    }
+
+    .release-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 3px solid #fff;
+      border-right: 1px solid #fff;
+
+      &:nth-child(3n) {
+        border-right: none; /* 3の倍数列 → 右線なし */
+      }
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border-bottom: none; /* 2段目行のborder-bottomなし */
+        @media only screen and (max-width: 959px) {
+        // sp
+        border-bottom: 3px solid #fff;
+        }
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+      }
+
+      .release-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 200px;
+          margin: 30px 0;
+        }
+      }
+      .release-text {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+
+        .release-type {
+          font-size: 14px;
+          color: #bbb;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 13px;
+          margin-top: 1px;
+
+        }
+        .release-name {
+          font-size: 16px;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  .view-all-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.collab-video-wrapper {
+  margin: 0 auto;
+  margin-top: 38px;
+}
+
+.collaboration-section {
+  /* 全体の余白など (従来通り) */
+  padding: 80px 30px;
+
+  /* タイトルバー (白背景) */
+  .collab-title-bar {
+    background-color: #fff;
+    color: #000;
+    padding: 16px 0;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    border: 3px solid #fff;
+
+    .section-title {
+      font-size: 16px;
+      letter-spacing: 4px;
+      margin: 0;
+      color: black;
+    }
+  }
+
+  /* コラボアイテムの白枠 */
+  .collab-grid {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    border: 3px solid #fff; /* 外枠 */
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #aaaaaa2b;
+    /* もし横並びにしたいなら repeat(2, 1fr) etc. */
+
+    @media (max-width: 768px) {
+      /* スマホでも1列 → 変化なし */
+    }
+
+    .collab-item {
+      position: relative;
+      border-bottom: 3px solid #fff; /* 仕切り線 */
+
+      &:last-child {
+        border-bottom: none; /* 最後の要素は枠線を消す */
+      }
+
+      .placeholder-box {
+        background-color: #666; /* グレー領域 */
+        height: 200px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .collab-text {
+        text-align: center;
+        margin-bottom: 20px;
+        white-space: pre-line; /* 改行を反映 */
+      }
+    }
+  }
+
+  /* ボタン */
+  .view-all-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
