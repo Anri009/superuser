@@ -38,7 +38,7 @@ function AnimatedRoutes() {
         <Route path="/music" element={<MusicPage />} exact />
         <Route path="/brewcast" element={<BrewcastPage />} exact />
         <Route path="/collaboration" element={<CollaborationPage />} exact />
-        <Route path="/unbound" element={<UnboundPage />} exact />
+        <Route path="/unbound" element={<UnboundPage />}exact />
         <Route path="/contact" element={<ContactPage />} exact/>
       </Routes>
     </AnimatePresence>
