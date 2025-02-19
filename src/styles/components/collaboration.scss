@@ -1,11 +1,10 @@
 .kanakitty-container {
   text-align: center;
   color: white;
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 0px 30px;
 }
 
-/* タイトル */
 .kanakitty-title {
   font-size: 32px;
   font-weight: bold;
@@ -16,7 +15,6 @@
   padding-bottom: 5px;
 }
 
-/* 動画エリア */
 .video-section {
   display: flex;
   justify-content: center;
@@ -24,7 +22,15 @@
   margin-bottom: 30px;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 60px;
+  background: rgba(170, 170, 170, 0.168627451);
+  padding: 40px 0px;
+  border: 3px solid #fff;
+  border-bottom: none;
+  @media only screen and (max-width: 959px) {
+  // sp
+  flex-direction: column;
+  align-items: center;
+  }
 }
 
 .video-wrapper {
@@ -47,7 +53,6 @@
   color: white;
 }
 
-/* 説明テキスト */
 .description {
   max-width: 1000px;
   margin: 0 auto;
@@ -55,5 +60,13 @@
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 150px;
-  margin-top: 70px;
+  background: rgba(170, 170, 170, 0.168627451);
+  border: 3px solid #fff;
+  border-top: none;
+  margin-bottom: 100px;
+  p {
+    margin-top: unset;
+    padding: 30px;
+    padding: 0px 30px 30px 30px;
+  }
 }

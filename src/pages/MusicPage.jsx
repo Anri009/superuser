@@ -101,6 +101,14 @@ function MusicPage() {
         ))}
       </div>
 
+      <div className="scroll-indicator mt-60">
+        SCROLL
+        <div className="line-container">
+          <div className="line-base"></div>
+          <div className="line-anim"></div>
+        </div>
+      </div>
+
       <div className="about-superuser">
         <div className="title-bar">
           <h2 className="section-title">SuperUser</h2>
@@ -117,7 +125,6 @@ function MusicPage() {
         </div>
       </div>
 
-
       <div className="epk-section">
         <h2>Press Kit</h2>
         <a
@@ -129,6 +136,14 @@ function MusicPage() {
         </a>
       </div>
     </div>
+
+    <div className="scroll-indicator mt-60">
+        SCROLL
+        <div className="line-container">
+          <div className="line-base"></div>
+          <div className="line-anim"></div>
+        </div>
+      </div>
 
     </motion.div>
   )

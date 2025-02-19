@@ -1,8 +1,9 @@
 .top-header, .bottom-header {
   background-color: transparent;
-  padding: 30px 0px;
+  padding: 20px 0;
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 
 .top-header {
@@ -10,6 +11,7 @@
   top: 0;
   left: 0;
   height: 25px;
+
 }
 
 .bottom-header {
@@ -24,29 +26,65 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 50px;
+  @media only screen and (max-width: 959px) {
+  // sp
+    justify-content: space-evenly;
+  }
+
 }
 
 nav ul li {
   display: inline;
+  position: relative; /* アニメーション用 */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ホバー時のスムーズな拡大アニメーション */
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
+/* アンダーラインアニメーション */
+nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+/* ホバー時にアンダーラインが伸びる */
+nav ul li:hover::after {
+  width: 100%;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  @media only screen and (max-width: 959px) {
-  // sp
-  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+@media only screen and (max-width: 959px) {
+  nav ul li a {
+    font-size: 12px;
   }
 }
 
-/* 各ページのメインコンテンツのスタイル */
 .main-content {
-  padding-top: 80px; /* 上部ヘッダーの高さを考慮 */
-  padding-bottom: 80px; /* 下部ヘッダーの高さを考慮 */
-  min-height: calc(100vh - 160px); /* ヘッダーを除いた高さを確保 */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: calc(100vh - 160px);
   background-color: #1E1B1B;
   color: white;
   display: flex;

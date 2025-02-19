@@ -1,14 +1,12 @@
 .follow-section {
-  /* 全体の余白など */
   padding: 80px 30px;
 
   .follow-grid {
     max-width: 1000px;
     margin: 0 auto 40px auto;
-    border: 3px solid #fff; /* 外枠 */
+    border: 3px solid #fff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* 必要に応じて列数を変更 */
     gap: 0;
     background: #aaaaaa2b;
 

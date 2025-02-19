@@ -3,7 +3,7 @@
   color: white;
   // background-color: #1E1B1B;
   background-size: 100% 100%;
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 0px 30px;
 }
 
@@ -23,34 +23,42 @@
 }
 
 .contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 880px;
+  max-width: 1000px;
   column-gap: 33px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #fff;
+  background: rgba(170, 170, 170, 0.168627451);
+  padding: 30px 0px;
+
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+  margin-bottom: 14px;
+  margin-top: 4px;
+  max-width: 1000px;
 
-.form-group label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: white;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  margin-top: 5px; /* フィールドとラベルの間隔を確保 */
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 13px;
+    margin-top: 5px;
+    max-width: 500px;
+    width: 66vw;
+  }
 }
 
 .form-group input::placeholder,
@@ -73,7 +81,7 @@
   color: white;
   border: 1px solid white;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -82,4 +90,10 @@
 .submit-btn:hover {
   background-color: white;
   color: black;
+}
+
+.error-message {
+  font-family: monospace;
+  color: #20d520;
+  padding: 0px 20px;
 }

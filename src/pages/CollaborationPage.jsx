@@ -10,9 +10,10 @@ function Collaboration() {
           transition={{ duration: 1, delay: 0.3 }}
     >
     <div className="kanakitty-container">
-      <h1 className="kanakitty-title">Kana Kitty × SuperUser</h1>
+      <div className="title-bar">
+        <h2 className="section-title">Kana Kitty × SuperUser</h2>
+      </div>
 
-      {/* YouTube 動画エリア */}
       <div className="video-section">
         <div className="video-wrapper">
           <iframe
@@ -35,7 +36,6 @@ function Collaboration() {
         </div>
       </div>
 
-      {/* 説明テキスト */}
       <div className="description">
         <p>
         At the crossroads of sound and movement, SuperUser and Kana Kitty craft performances that are both immersive and unpredictable. SuperUser shapes the sonic environment—drawing from deep, pulsing techno to atmospheric soundscapes—while Kana embodies the music through the raw, transformative language of Butoh. Their collaboration has graced stages from Tokyo’s legendary Womb to the open-air energy of Re:Birth Festival, as well as a spectrum of private and public dance and theatre events.  <br/><br/>
@@ -44,6 +44,14 @@ function Collaboration() {
         </p>
       </div>
     </div>
+
+    <div className="scroll-indicator mt-60">
+        SCROLL
+        <div className="line-container">
+          <div className="line-base"></div>
+          <div className="line-anim"></div>
+        </div>
+      </div>
     </motion.div>
   );
 }

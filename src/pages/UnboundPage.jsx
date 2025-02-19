@@ -2,9 +2,9 @@ import React from 'react';
 
 function UnboundPage() {
   return (
-    <div>
-      <h1>Unbound Project Tab</h1>
-      <p>Discover my Unbound projects and what I've been working on.</p>
+    <div className='comingsoon'>
+      <h1>Coming Soon</h1>
+      <p>Exciting things are on the way <br className='sm-only' />! Stay tuned for my upcoming projects</p>
     </div>
   );
 }

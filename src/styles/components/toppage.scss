@@ -1,7 +1,7 @@
 .top-container {
-  background-color: transparent;  /* 背景: 黒 */
+  background-color: transparent;
   color: #fff;
-  font-family: 'Michroma', sans-serif; /* 必要ならGoogle Fontsなど */
+  font-family: 'Michroma', sans-serif;
 }
 
 .hero-section {
@@ -51,8 +51,8 @@
 
   .line-container {
     position: relative;
-    width: 2px;         /* 細い線の太さ */
-    height: 60px;       /* 線の長さをお好みで調整 */
+    width: 2px;
+    height: 60px;
     margin-top: 8px;
 
     /* 既存の細い線 (縦) */
@@ -60,9 +60,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 2px;           /* 細線の太さ */
-      height: 100%;         /* 親要素の高さに合わせて全長 */
-      background-color: #6666667a; /* 細い線の色 */
+      width: 2px;
+      height: 100%;
+      background-color: #6666667a;
     }
 
     /* 太いアニメ線 */
@@ -99,8 +99,12 @@
 
 
 .latest-releases-section {
-  /* タイトルバー (白背景) */
   padding: 80px 30px;
+
+  a {
+    text-decoration: none;
+  }
+
   .title-bar {
     background-color: #fff;
     color: #000;
@@ -109,10 +113,10 @@
     text-align: center;
     margin: 0 auto;
     border: 3px solid #fff;
-
     .section-title {
       font-size: 16px;
-      letter-spacing: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
       margin: 0; /* 余白を調整したい場合は変更 */
     }
   }
@@ -201,6 +205,7 @@
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 
     &:hover {
       background-color: #fff;
@@ -213,12 +218,13 @@
   margin: 0 auto;
   margin-top: 38px;
 }
-
 .collaboration-section {
-  /* 全体の余白など (従来通り) */
   padding: 80px 30px;
 
-  /* タイトルバー (白背景) */
+  a {
+    text-decoration: none;
+  }
+
   .collab-title-bar {
     background-color: #fff;
     color: #000;
@@ -230,7 +236,8 @@
 
     .section-title {
       font-size: 16px;
-      letter-spacing: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
       margin: 0;
       color: black;
     }
@@ -273,7 +280,8 @@
       .collab-text {
         text-align: center;
         margin-bottom: 20px;
-        white-space: pre-line; /* 改行を反映 */
+        white-space: pre-line;
+        padding: 0px 25px;
       }
     }
   }
@@ -290,6 +298,7 @@
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 
     &:hover {
       background-color: #fff;

@@ -130,7 +130,7 @@ function TopPage() {
                 allowFullScreen
               ></iframe>
             </div>
-            <p className="collab-text">SuperUser + Kana Kitty<br/>@ Re:birth Festival</p>
+            <p className="collab-text">SuperUser + Kana Kitty@ Re:birth Festival</p>
           </div>
           <div className="collab-item">
             <div className="video-wrapper collab-video-wrapper">
@@ -141,7 +141,7 @@ function TopPage() {
                 allowFullScreen
               ></iframe>
             </div>
-            <p className="collab-text">SuperUser + Kana Kitty<br/>@ UNBOUND</p>
+            <p className="collab-text">SuperUser + Kana Kitty@ UNBOUND</p>
           </div>
         </div>
         <Link to="/collaboration">

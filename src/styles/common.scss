@@ -10,6 +10,7 @@
 @use './components/music';
 @use './components/collaboration';
 @use './components/followme';
+@use './components/unbound';
 
 
 
@@ -42,7 +43,8 @@ body {
 
 .section-title {
   font-size: 16px;
-  letter-spacing: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
   margin: 0;
   @media only screen and (max-width: 959px) {
     // sp
