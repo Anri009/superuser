@@ -1,46 +1,54 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 
+import album1 from '../assets/image/album1.png';
+import album2 from '../assets/image/album2.png';
+import album3 from '../assets/image/album3.png';
+import album4 from '../assets/image/album4.png';
+import album5 from '../assets/image/album5.png';
+import album6 from '../assets/image/album6.png';
+import superuser from '../assets/image/superuser.png';
+
 
 function MusicPage() {
   const musicItems = [
     {
-      image: '/src/assets/image/album1.png',
+      image: album1,
       type: 'Release',
       name: 'Emergent Phenomena',
       genre: 'Techno',
       url: 'https://soundcloud.com/sweetmusicofc/premiere-superuser-emergent-phenomena-plus-future-records'
     },
     {
-      image: '/src/assets/image/album2.png',
+      image: album2,
       type: 'Mix',
       name: 'Deep/Tech House Live Mix for OutPut',
       genre: 'House',
       url: 'https://soundcloud.com/xv_superuser/deeptech-house-live-mix-for-output-sankeys-penthouse'
     },
     {
-      image: '/src/assets/image/album3.png',
+      image: album3,
       type: 'Release',
       name: 'Enter The Vortal',
       genre: 'Ambient',
       url: 'https://www.mixcloud.com/xv_SuperUser/enter-the-vortal/'
     },
     {
-      image: '/src/assets/image/album4.png',
+      image: album4,
       type: 'Mix',
       name: 'Tech House and Groovy Basslines live',
       genre: 'House',
       url: 'https://www.mixcloud.com/xv_SuperUser/sleazy-tech-house-and-groovy-basslines-live-sidebyside-oath-tokyo-202007/'
     },
     {
-      image: '/src/assets/image/album5.png',
+      image: album5,
       type: 'Mix',
       name: "Xanadu's Pleasuredome",
       genre: 'Techno',
       url: 'https://www.mixcloud.com/xv_SuperUser/xanadus-pleasuredome/'
     },
     {
-      image: '/src/assets/image/album6.png',
+      image: album6,
       type: 'Mix',
       name: 'Shredding the Astral Plane',
       genre: 'Ambient',
@@ -114,7 +122,7 @@ function MusicPage() {
           <h2 className="section-title">SuperUser</h2>
         </div>
         <div className="superuser-content">
-          <img src="/src/assets/image/superuser.png" alt="SuperUser" />
+          <img src={superuser} alt="superuser" />
           <p>
           SuperUser is a name that needs no introduction in the world of techno and house music. Boasting over a decade and a half of deep immersion in the techno music realm, he has emerged as not just a DJ or producer, but as a veritable maestro of the soundscapes. His origins in the UK and his formative years in Tokyo's kinetic music scene have shaped an artist who masterfully bridges the gap between divergent sounds. Placing him at the forefront of DJ innovation. <br /><br />
           SuperUser's sets are not mere mixes; they are narratives. Narratives that span the gritty undertones of Detroit, the soulful rhythms of Africa, the experimental edge of Europe, and the avant-garde vibrations of Japan. Whether grounding his audience in the foundational 4/4 beat or venturing into the uncharted territories of broken basslines and kaleidoscopic percussion, his performances are a testament to his relentless pursuit of musical excellence.<br /><br />

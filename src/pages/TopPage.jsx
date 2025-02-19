@@ -1,7 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import logo from '../assets/image/logo.svg'
 import { Link } from 'react-router-dom';
+
+import logo from '../assets/image/logo.svg'
+import album1 from '../assets/image/album1.png';
+import album2 from '../assets/image/album2.png';
+import album3 from '../assets/image/album3.png';
+import album4 from '../assets/image/album4.png';
+import album5 from '../assets/image/album5.png';
+import album6 from '../assets/image/album6.png';
+
+
 
 function TopPage() {
   return (
@@ -32,7 +41,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://soundcloud.com/sweetmusicofc/premiere-superuser-emergent-phenomena-plus-future-records" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                  <img src="/src/assets/image/album1.png" alt="Emergent Phenomena" />
+                <img src={album1} alt="Emergent Phenomena" />
               </div>
               <div className="release-text">
                 <p className="release-type">Release</p>
@@ -44,7 +53,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://soundcloud.com/xv_superuser/deeptech-house-live-mix-for-output-sankeys-penthouse" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                <img src="/src/assets/image/album2.png" alt="Deep/Tech House Mix" />
+              <img src={album2} alt="Deep/Tech House Mix" />
               </div>
               <div className="release-text">
                 <p className="release-type">Mix</p>
@@ -56,7 +65,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://www.mixcloud.com/xv_SuperUser/enter-the-vortal/" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                <img src="/src/assets/image/album3.png" alt="Enter The Vortal" />
+                <img src={album3} alt="Enter The Vortal" />
               </div>
               <div className="release-text">
                 <p className="release-type">Release</p>
@@ -68,7 +77,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://www.mixcloud.com/xv_SuperUser/sleazy-tech-house-and-groovy-basslines-live-sidebyside-oath-tokyo-202007/" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                <img src="/src/assets/image/album4.png" alt="Tech House & Groovy Basslines" />
+                <img src={album4} alt="Tech House & Groovy Basslines" />
               </div>
               <div className="release-text">
                 <p className="release-type">Mix</p>
@@ -80,7 +89,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://www.mixcloud.com/xv_SuperUser/xanadus-pleasuredome/" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                <img src="/src/assets/image/album5.png" alt="Xanadu's Pleasuredome" />
+                <img src={album5} alt="Xanadu's Pleasuredome" />
               </div>
               <div className="release-text">
                 <p className="release-type">Mix</p>
@@ -92,7 +101,7 @@ function TopPage() {
           <div className="release-item">
             <a href="https://www.mixcloud.com/xv_SuperUser/drifting-the-astral-plane/" target="_blank" rel="noopener noreferrer">
               <div className="release-image">
-                <img src="/src/assets/image/album6.png" alt="Shredding the Astral Plane" />
+                <img src={album6} alt="Shredding the Astral Plane" />
               </div>
               <div className="release-text">
                 <p className="release-type">Mix</p>
